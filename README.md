@@ -2,10 +2,9 @@
 
 **Hierarchical Efficient RWKV with Multi-rate Event Sensing**
 
-HERMES is a real-time, causal, frame-by-frame traffic hazard anticipation system designed for edge deployment.  
-The model predicts hazardous traffic situations directly from video streams under strict online constraints.
+HERMES is a research-to-production project for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model.
 
-> Research-to-production project for real-time traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model, deployed on iPhone and NVIDIA Jetson Orin Nano and validated in real-world motorcycle riding scenarios.
+The system performs frame-by-frame online inference directly from video streams, deployed on iPhone and NVIDIA Jetson Orin Nano, and validated in real-world motorcycle riding scenarios.
 
 ---
 
@@ -27,7 +26,7 @@ HERMES was optimized with CoreML and deployed on iPhone for real-time frame-by-f
 - **CoreML-optimized iOS deployment**
 - **Frame-by-frame inference on iPhone 17**
 - **Motorcycle-mounted real-world testing**
-- **RWKV-based temporal modeling** with linear complexity
+- **Proposed custo spatio-temporal modeling** with linear complexity
 - **Multi-task prediction**: anomaly occurrence, localization, and category
 - **Edge deployment**: 31M parameters, 100 FPS on Jetson Orin Nano
 
