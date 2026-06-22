@@ -8,7 +8,6 @@ description: Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / NVidia Je
   <img src="assets/Hermes_app.png" alt="HERMES iOS safety interface" width="95%">
 </p>
 
-# Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / Nvidia Jetson)
 
 **HERMES: Hierarchical Efficient RWKV with Multi-rate Event Sensing**
 
