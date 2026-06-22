@@ -52,7 +52,7 @@ The following demos show HERMES running in real time on iPhone during motorcycle
 ### Demo 1 — Dense Urban Warning
 
 <p align="center">
-  <img src="assets/gifs/demo_1.gif" alt="Dense urban warning demo" width="90%">
+  <img src="assets/demo_1.gif" alt="Dense urban warning demo" width="90%">
 </p>
 
 Real-time **WARNING** prediction in dense scooter traffic near an intersection, where nearby vehicles create elevated short-range risk.
@@ -62,7 +62,7 @@ Real-time **WARNING** prediction in dense scooter traffic near an intersection, 
 ### Demo 2 — Nighttime Following
 
 <p align="center">
-  <img src="assets/gifs/demo_2.gif" alt="Nighttime following demo" width="90%">
+  <img src="assets/demo_2.gif" alt="Nighttime following demo" width="90%">
 </p>
 
 Stable **SAFE** prediction during nighttime riding with cars and scooters ahead under low-light conditions.
@@ -72,7 +72,7 @@ Stable **SAFE** prediction during nighttime riding with cars and scooters ahead 
 ### Demo 3 — Nighttime Intersection Zone
 
 <p align="center">
-  <img src="assets/gifs/demo_3.gif" alt="Nighttime intersection zone demo" width="90%">
+  <img src="assets/demo_3.gif" alt="Nighttime intersection zone demo" width="90%">
 </p>
 
 Online risk estimation while approaching a marked intersection area with complex road patterns and artificial lighting.
@@ -82,7 +82,7 @@ Online risk estimation while approaching a marked intersection area with complex
 ### Demo 4 — Multi-Lane Night Traffic
 
 <p align="center">
-  <img src="assets/gifs/demo_4.gif" alt="Multi-lane night traffic demo" width="90%">
+  <img src="assets/demo_4.gif" alt="Multi-lane night traffic demo" width="90%">
 </p>
 
 Causal frame-by-frame inference during normal multi-lane traffic flow at night.
@@ -92,7 +92,7 @@ Causal frame-by-frame inference during normal multi-lane traffic flow at night.
 ### Demo 5 — Rainy Scooter Traffic
 
 <p align="center">
-  <img src="assets/gifs/demo_5.gif" alt="Rainy scooter traffic demo" width="90%">
+  <img src="assets/demo_5.gif" alt="Rainy scooter traffic demo" width="90%">
 </p>
 
 Robust prediction under wet-road reflections and dense scooter interactions.
@@ -102,7 +102,7 @@ Robust prediction under wet-road reflections and dense scooter interactions.
 ### Demo 6 — Rainy Urban Corridor
 
 <p align="center">
-  <img src="assets/gifs/demo_6.gif" alt="Rainy urban corridor demo" width="90%">
+  <img src="assets/demo_6.gif" alt="Rainy urban corridor demo" width="90%">
 </p>
 
 Real-world deployment in rainy city traffic with storefront clutter, scooters, and mixed vehicles.
@@ -112,7 +112,7 @@ Real-world deployment in rainy city traffic with storefront clutter, scooters, a
 ### Demo 7 — Close-Range Scooter Interaction
 
 <p align="center">
-  <img src="assets/gifs/demo_7.gif" alt="Close-range scooter interaction demo" width="90%">
+  <img src="assets/demo_7.gif" alt="Close-range scooter interaction demo" width="90%">
 </p>
 
 Hazard localization highlights nearby scooters and vehicles in close-proximity riding.
@@ -122,7 +122,7 @@ Hazard localization highlights nearby scooters and vehicles in close-proximity r
 ### Demo 8 — Rainy Intersection Approach
 
 <p align="center">
-  <img src="assets/gifs/demo_8.gif" alt="Rainy intersection approach demo" width="90%">
+  <img src="assets/demo_8.gif" alt="Rainy intersection approach demo" width="90%">
 </p>
 
 Risk estimation while approaching an urban intersection under rainy conditions.
@@ -132,7 +132,7 @@ Risk estimation while approaching an urban intersection under rainy conditions.
 ### Demo 9 — Crowded Scooter Queue
 
 <p align="center">
-  <img src="assets/gifs/demo_9.gif" alt="Crowded scooter queue demo" width="90%">
+  <img src="assets/demo_9.gif" alt="Crowded scooter queue demo" width="90%">
 </p>
 
 Stable prediction in slow-moving dense scooter traffic with pedestrians and roadside activity.
@@ -142,7 +142,7 @@ Stable prediction in slow-moving dense scooter traffic with pedestrians and road
 ### Demo 10 — Higher-Speed Urban Road
 
 <p align="center">
-  <img src="assets/gifs/demo_10.gif" alt="Higher-speed urban road demo" width="90%">
+  <img src="assets/demo_10.gif" alt="Higher-speed urban road demo" width="90%">
 </p>
 
 Real-time safety monitoring at higher speed with surrounding vehicles and lane-level motion.
@@ -156,14 +156,14 @@ Use this section instead of the long demo list above if you prefer a more compac
 <table>
   <tr>
     <td width="50%">
-      <img src="assets/gifs/demo_1.gif" alt="Demo 1" width="100%">
+      <img src="assets/demo_1.gif" alt="Demo 1" width="100%">
       <br>
       <strong>Demo 1 — Dense Urban Warning</strong>
       <br>
       Real-time WARNING prediction in dense scooter traffic.
     </td>
     <td width="50%">
-      <img src="assets/gifs/demo_2.gif" alt="Demo 2" width="100%">
+      <img src="assets/demo_2.gif" alt="Demo 2" width="100%">
       <br>
       <strong>Demo 2 — Nighttime Following</strong>
       <br>
@@ -172,14 +172,14 @@ Use this section instead of the long demo list above if you prefer a more compac
   </tr>
   <tr>
     <td width="50%">
-      <img src="assets/gifs/demo_3.gif" alt="Demo 3" width="100%">
+      <img src="assets/demo_3.gif" alt="Demo 3" width="100%">
       <br>
       <strong>Demo 3 — Nighttime Intersection Zone</strong>
       <br>
       Risk estimation near complex intersection markings.
     </td>
     <td width="50%">
-      <img src="assets/gifs/demo_4.gif" alt="Demo 4" width="100%">
+      <img src="assets/demo_4.gif" alt="Demo 4" width="100%">
       <br>
       <strong>Demo 4 — Multi-Lane Night Traffic</strong>
       <br>
@@ -188,14 +188,14 @@ Use this section instead of the long demo list above if you prefer a more compac
   </tr>
   <tr>
     <td width="50%">
-      <img src="assets/gifs/demo_5.gif" alt="Demo 5" width="100%">
+      <img src="assets/demo_5.gif" alt="Demo 5" width="100%">
       <br>
       <strong>Demo 5 — Rainy Scooter Traffic</strong>
       <br>
       Robust prediction under wet-road reflections.
     </td>
     <td width="50%">
-      <img src="assets/gifs/demo_6.gif" alt="Demo 6" width="100%">
+      <img src="assets/demo_6.gif" alt="Demo 6" width="100%">
       <br>
       <strong>Demo 6 — Rainy Urban Corridor</strong>
       <br>
@@ -204,14 +204,14 @@ Use this section instead of the long demo list above if you prefer a more compac
   </tr>
   <tr>
     <td width="50%">
-      <img src="assets/gifs/demo_7.gif" alt="Demo 7" width="100%">
+      <img src="assets/demo_7.gif" alt="Demo 7" width="100%">
       <br>
       <strong>Demo 7 — Close-Range Scooter Interaction</strong>
       <br>
       Localization of nearby traffic participants.
     </td>
     <td width="50%">
-      <img src="assets/gifs/demo_8.gif" alt="Demo 8" width="100%">
+      <img src="assets/demo_8.gif" alt="Demo 8" width="100%">
       <br>
       <strong>Demo 8 — Rainy Intersection Approach</strong>
       <br>
@@ -220,14 +220,14 @@ Use this section instead of the long demo list above if you prefer a more compac
   </tr>
   <tr>
     <td width="50%">
-      <img src="assets/gifs/demo_9.gif" alt="Demo 9" width="100%">
+      <img src="assets/demo_9.gif" alt="Demo 9" width="100%">
       <br>
       <strong>Demo 9 — Crowded Scooter Queue</strong>
       <br>
       Stable prediction in dense slow-moving traffic.
     </td>
     <td width="50%">
-      <img src="assets/gifs/demo_10.gif" alt="Demo 10" width="100%">
+      <img src="assets/demo_10.gif" alt="Demo 10" width="100%">
       <br>
       <strong>Demo 10 — Higher-Speed Urban Road</strong>
       <br>
@@ -241,7 +241,7 @@ Use this section instead of the long demo list above if you prefer a more compac
 ## iOS App Interface
 
 <p align="center">
-  <img src="assets/hermes_ios_ui_annotated.png" alt="Annotated HERMES iOS interface" width="95%">
+  <img src="assets/Hermes_app.png" alt="Annotated HERMES iOS interface" width="95%">
 </p>
 
 The HERMES iOS interface is designed for real-time riding feedback while keeping the road view unobstructed.
