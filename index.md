@@ -1,14 +1,14 @@
 ---
 layout: default
 title: HERMES
-description: Real-Time Traffic Hazard Anticipation on Edge Devices
+description: Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / NVidia Jetson)
 ---
 
 <p align="center">
-  <img src="assets/hermes_ios_ui_annotated.png" alt="HERMES iOS safety interface" width="95%">
+  <img src="assets/Hermes_app.png" alt="HERMES iOS safety interface" width="95%">
 </p>
 
-# Real-Time Traffic Hazard Anticipation on Edge Devices (iOS / Nvidia Jetson)
+# Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / Nvidia Jetson)
 
 **HERMES: Hierarchical Efficient RWKV with Multi-rate Event Sensing**
 
