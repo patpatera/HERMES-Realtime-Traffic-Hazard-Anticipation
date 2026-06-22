@@ -8,15 +8,13 @@ description: Real-Time Traffic Hazard Anticipation on Edge Devices
   <img src="assets/hermes_ios_ui_annotated.png" alt="HERMES iOS safety interface" width="95%">
 </p>
 
-# HERMES: Real-Time Traffic Hazard Anticipation on Edge Devices
+# Real-Time Traffic Hazard Anticipation on Edge Devices (iOS / Nvidia Jetson)
 
-**Hierarchical Efficient RWKV with Multi-rate Event Sensing**
+**HERMES: Hierarchical Efficient RWKV with Multi-rate Event Sensing**
 
 HERMES is a research-to-production project for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model.
 
 The system performs frame-by-frame online inference directly from video streams and predicts traffic risk without using future frames. HERMES is deployed on **iPhone via CoreML** and on **NVIDIA Jetson Orin Nano via CUDA/TensorRT**, and validated in real-world motorcycle riding scenarios.
-
-> Paper currently under review. Code and pretrained weights will be released after the review process.
 
 ---
 
@@ -30,7 +28,7 @@ The prototype provides:
 
 - **Causal frame-by-frame inference**
 - **Live traffic risk estimation**
-- **SAFE / WARNING state prediction**
+- **SAFE / WARNING / DANGER state prediction**
 - **Frame-level hazard probability**
 - **Current riding speed**
 - **Visual hazard localization cues**
@@ -46,112 +44,6 @@ The system was tested in real-world urban riding scenarios, including rainy road
 The following demos show HERMES running in real time on iPhone during motorcycle-mounted riding in real-world urban traffic.
 
 > GIFs may take several seconds to load depending on network speed. Each demo is sampled from real riding footage.
-
----
-
-### Demo 1 — Dense Urban Warning
-
-<p align="center">
-  <img src="assets/demo_1.gif" alt="Dense urban warning demo" width="90%">
-</p>
-
-Real-time **WARNING** prediction in dense scooter traffic near an intersection, where nearby vehicles create elevated short-range risk.
-
----
-
-### Demo 2 — Nighttime Following
-
-<p align="center">
-  <img src="assets/demo_2.gif" alt="Nighttime following demo" width="90%">
-</p>
-
-Stable **SAFE** prediction during nighttime riding with cars and scooters ahead under low-light conditions.
-
----
-
-### Demo 3 — Nighttime Intersection Zone
-
-<p align="center">
-  <img src="assets/demo_3.gif" alt="Nighttime intersection zone demo" width="90%">
-</p>
-
-Online risk estimation while approaching a marked intersection area with complex road patterns and artificial lighting.
-
----
-
-### Demo 4 — Multi-Lane Night Traffic
-
-<p align="center">
-  <img src="assets/demo_4.gif" alt="Multi-lane night traffic demo" width="90%">
-</p>
-
-Causal frame-by-frame inference during normal multi-lane traffic flow at night.
-
----
-
-### Demo 5 — Rainy Scooter Traffic
-
-<p align="center">
-  <img src="assets/demo_5.gif" alt="Rainy scooter traffic demo" width="90%">
-</p>
-
-Robust prediction under wet-road reflections and dense scooter interactions.
-
----
-
-### Demo 6 — Rainy Urban Corridor
-
-<p align="center">
-  <img src="assets/demo_6.gif" alt="Rainy urban corridor demo" width="90%">
-</p>
-
-Real-world deployment in rainy city traffic with storefront clutter, scooters, and mixed vehicles.
-
----
-
-### Demo 7 — Close-Range Scooter Interaction
-
-<p align="center">
-  <img src="assets/demo_7.gif" alt="Close-range scooter interaction demo" width="90%">
-</p>
-
-Hazard localization highlights nearby scooters and vehicles in close-proximity riding.
-
----
-
-### Demo 8 — Rainy Intersection Approach
-
-<p align="center">
-  <img src="assets/demo_8.gif" alt="Rainy intersection approach demo" width="90%">
-</p>
-
-Risk estimation while approaching an urban intersection under rainy conditions.
-
----
-
-### Demo 9 — Crowded Scooter Queue
-
-<p align="center">
-  <img src="assets/demo_9.gif" alt="Crowded scooter queue demo" width="90%">
-</p>
-
-Stable prediction in slow-moving dense scooter traffic with pedestrians and roadside activity.
-
----
-
-### Demo 10 — Higher-Speed Urban Road
-
-<p align="center">
-  <img src="assets/demo_10.gif" alt="Higher-speed urban road demo" width="90%">
-</p>
-
-Real-time safety monitoring at higher speed with surrounding vehicles and lane-level motion.
-
----
-
-## Compact Demo Grid
-
-Use this section instead of the long demo list above if you prefer a more compact page.
 
 <table>
   <tr>
