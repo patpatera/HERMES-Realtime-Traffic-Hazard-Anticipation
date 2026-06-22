@@ -150,18 +150,9 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 ---
 
 ## System Pipeline
-
-```mermaid
-flowchart LR
-    A[Live Camera Stream] --> B[Frame Preprocessing]
-    B --> C[CoreML HERMES Model]
-    C --> D[Risk Score]
-    C --> E[Hazard Localization]
-    C --> F[Traffic State]
-    D --> G[iOS Safety Interface]
-    E --> G
-    F --> G
-```
+<p align="center">
+  <img src="assets/diagram.png" alt="HERMES iOS safety diagram" width="95%">
+</p>
 
 ---
 
