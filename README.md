@@ -16,7 +16,7 @@ HERMES was optimized with CoreML and deployed on iPhone for real-time frame-by-f
 
 | Motorcycle-mounted iPhone demo | Real-time hazard prediction |
 |---|---|
-| ![](assets/demo_1.gif) | ![](assets/demo_2.gif) |
+| ![](demos/Demo_V1.gif) | ![](assets/demo_2.gif) |
 
 ---
 
