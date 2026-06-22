@@ -227,6 +227,6 @@ Current status:
 
 ## Contact
 
-**Patrik Patera**  
-Ph.D. Candidate, Computer Vision & Deep Learning  
+**Patrik Patera, Ph.D.**  
+Computer Vision & Deep Learning Researcher
 Taiwan Tech
