@@ -1,4 +1,4 @@
-# HERMES: Real-Time Traffic Hazard Anticipation on Edge Devices
+# HERMES: Real-Time Traffic Hazard Anticipation on Edge Devices (iOS / NVidia Jetson)
 
 **Hierarchical Efficient RWKV with Multi-rate Event Sensing**
 
