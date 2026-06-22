@@ -1,61 +1,260 @@
-# Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / NVidia Jetson)
+---
+layout: default
+title: HERMES
+description: Real-Time Traffic Hazard Anticipation on Edge Devices
+---
 
-**HERMES: Hierarchical Efficient RWKV with Multi-rate Event Sensing**
+<p align="center">
+  <img src="assets/hermes_ios_ui_annotated.png" alt="HERMES iOS safety interface" width="95%">
+</p>
 
-HERMES is a research-to-production project for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized video (spatio-temporal) model for multi-reasoning.
+# HERMES: Real-Time Traffic Hazard Anticipation on Edge Devices
 
-The system performs frame-by-frame online inference directly from video streams and predicts traffic risk without using future frames. HERMES is deployed on iPhone via CoreML and on NVIDIA Jetson Orin Nano via CUDA/TensorRT, and validated in real-world motorcycle riding scenarios.
+**Hierarchical Efficient RWKV with Multi-rate Event Sensing**
+
+HERMES is a research-to-production project for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model.
+
+The system performs frame-by-frame online inference directly from video streams and predicts traffic risk without using future frames. HERMES is deployed on **iPhone via CoreML** and on **NVIDIA Jetson Orin Nano via CUDA/TensorRT**, and validated in real-world motorcycle riding scenarios.
+
+> Paper currently under review. Code and pretrained weights will be released after the review process.
 
 ---
 
 ## Real-World iOS Deployment
 
-HERMES was integrated into a real-time iOS prototype for motorcycle-mounted traffic hazard anticipation.  
-The system performs causal frame-by-frame inference directly from the live camera stream and visualizes predicted traffic risk through an on-screen safety interface.
+HERMES was integrated into a real-time iOS prototype for motorcycle-mounted traffic hazard anticipation.
 
-The app displays:
+The app processes a live camera stream directly on device and visualizes predicted traffic risk through a lightweight safety dashboard.
 
-- real-time hazard state: **SAFE / WARNING / DANGER**
-- frame-level risk probability
-- current riding speed
-- visual localization overlay for potentially relevant traffic regions
-- continuous online prediction without access to future frames
+The prototype provides:
 
-The model was optimized for mobile edge deployment using CoreML and tested in real-world urban riding scenarios, including daytime rain, nighttime traffic, dense scooter flows, intersections, and mixed vehicle environments.
+- **Causal frame-by-frame inference**
+- **Live traffic risk estimation**
+- **SAFE / WARNING state prediction**
+- **Frame-level hazard probability**
+- **Current riding speed**
+- **Visual hazard localization cues**
+- **Sound and vibration warning options**
+- **Runtime controls for camera mode, resolution, inference frequency, focus, and exposure**
+
+The system was tested in real-world urban riding scenarios, including rainy roads, nighttime traffic, dense scooter flows, intersections, and mixed vehicle environments.
 
 ---
 
 ## Demo Gallery
 
-The following examples show HERMES running in real time on iPhone during motorcycle riding in urban traffic.  
-Each demo is sampled from real-world riding footage and illustrates different traffic conditions, lighting, road layouts, and interaction patterns.
+The following demos show HERMES running in real time on iPhone during motorcycle-mounted riding in real-world urban traffic.
 
-| Demo | Scenario | Description |
-|---|---|---|
-| ![](assets/demo_1.gif) | Dense urban interaction | Real-time **WARNING** prediction in dense scooter traffic near an intersection, where nearby vehicles create elevated short-range risk. |
-| ![](assets/demo_2.gif) | Nighttime following | Stable **SAFE** prediction during nighttime riding with cars and scooters ahead under low-light conditions. |
-| ![](assets/demo_3.gif) | Nighttime intersection zone | Online risk estimation while approaching a marked intersection area with complex road patterns and artificial lighting. |
-| ![](assets/demo_4.gif) | Multi-lane night traffic | Causal frame-by-frame inference during normal multi-lane traffic flow at night. |
-| ![](assets/demo_5.gif) | Rainy scooter traffic | Robust prediction under wet-road reflections and dense scooter interactions. |
-| ![](assets/demo_6.gif) | Rainy urban corridor | Real-world deployment in rainy city traffic with storefront clutter, scooters, and mixed vehicles. |
-| ![](assets/demo_7.gif) | Close-range scooter interaction | Hazard localization highlights nearby scooters and vehicles in close-proximity riding. |
-| ![](assets/demo_8.gif) | Rainy intersection approach | Risk estimation while approaching an urban intersection under rainy conditions. |
-| ![](assets/demo_9.gif) | Crowded scooter queue | Stable prediction in slow-moving dense scooter traffic with pedestrians and roadside activity. |
-| ![](assets/demo_10.gif) | Higher-speed urban road | Real-time safety monitoring at higher speed with surrounding vehicles and lane-level motion. |
+> GIFs may take several seconds to load depending on network speed. Each demo is sampled from real riding footage.
 
 ---
 
-## App Interface
+### Demo 1 — Dense Urban Warning
 
-The iOS interface is designed for real-time riding feedback:
+<p align="center">
+  <img src="assets/gifs/demo_1.gif" alt="Dense urban warning demo" width="90%">
+</p>
 
-- **Status indicator**: displays `SAFE` or `WARNING`
-- **Risk score**: frame-level probability of hazardous traffic evolution
-- **Speed display**: current riding speed from device location sensors
-- **Visual overlay**: highlights traffic regions contributing to the prediction
-- **Live camera view**: continuous video stream processed on-device
+Real-time **WARNING** prediction in dense scooter traffic near an intersection, where nearby vehicles create elevated short-range risk.
 
-The interface is intentionally lightweight to preserve real-time performance and avoid distracting the rider.
+---
+
+### Demo 2 — Nighttime Following
+
+<p align="center">
+  <img src="assets/gifs/demo_2.gif" alt="Nighttime following demo" width="90%">
+</p>
+
+Stable **SAFE** prediction during nighttime riding with cars and scooters ahead under low-light conditions.
+
+---
+
+### Demo 3 — Nighttime Intersection Zone
+
+<p align="center">
+  <img src="assets/gifs/demo_3.gif" alt="Nighttime intersection zone demo" width="90%">
+</p>
+
+Online risk estimation while approaching a marked intersection area with complex road patterns and artificial lighting.
+
+---
+
+### Demo 4 — Multi-Lane Night Traffic
+
+<p align="center">
+  <img src="assets/gifs/demo_4.gif" alt="Multi-lane night traffic demo" width="90%">
+</p>
+
+Causal frame-by-frame inference during normal multi-lane traffic flow at night.
+
+---
+
+### Demo 5 — Rainy Scooter Traffic
+
+<p align="center">
+  <img src="assets/gifs/demo_5.gif" alt="Rainy scooter traffic demo" width="90%">
+</p>
+
+Robust prediction under wet-road reflections and dense scooter interactions.
+
+---
+
+### Demo 6 — Rainy Urban Corridor
+
+<p align="center">
+  <img src="assets/gifs/demo_6.gif" alt="Rainy urban corridor demo" width="90%">
+</p>
+
+Real-world deployment in rainy city traffic with storefront clutter, scooters, and mixed vehicles.
+
+---
+
+### Demo 7 — Close-Range Scooter Interaction
+
+<p align="center">
+  <img src="assets/gifs/demo_7.gif" alt="Close-range scooter interaction demo" width="90%">
+</p>
+
+Hazard localization highlights nearby scooters and vehicles in close-proximity riding.
+
+---
+
+### Demo 8 — Rainy Intersection Approach
+
+<p align="center">
+  <img src="assets/gifs/demo_8.gif" alt="Rainy intersection approach demo" width="90%">
+</p>
+
+Risk estimation while approaching an urban intersection under rainy conditions.
+
+---
+
+### Demo 9 — Crowded Scooter Queue
+
+<p align="center">
+  <img src="assets/gifs/demo_9.gif" alt="Crowded scooter queue demo" width="90%">
+</p>
+
+Stable prediction in slow-moving dense scooter traffic with pedestrians and roadside activity.
+
+---
+
+### Demo 10 — Higher-Speed Urban Road
+
+<p align="center">
+  <img src="assets/gifs/demo_10.gif" alt="Higher-speed urban road demo" width="90%">
+</p>
+
+Real-time safety monitoring at higher speed with surrounding vehicles and lane-level motion.
+
+---
+
+## Compact Demo Grid
+
+Use this section instead of the long demo list above if you prefer a more compact page.
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="assets/gifs/demo_1.gif" alt="Demo 1" width="100%">
+      <br>
+      <strong>Demo 1 — Dense Urban Warning</strong>
+      <br>
+      Real-time WARNING prediction in dense scooter traffic.
+    </td>
+    <td width="50%">
+      <img src="assets/gifs/demo_2.gif" alt="Demo 2" width="100%">
+      <br>
+      <strong>Demo 2 — Nighttime Following</strong>
+      <br>
+      Stable SAFE prediction during low-light riding.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/gifs/demo_3.gif" alt="Demo 3" width="100%">
+      <br>
+      <strong>Demo 3 — Nighttime Intersection Zone</strong>
+      <br>
+      Risk estimation near complex intersection markings.
+    </td>
+    <td width="50%">
+      <img src="assets/gifs/demo_4.gif" alt="Demo 4" width="100%">
+      <br>
+      <strong>Demo 4 — Multi-Lane Night Traffic</strong>
+      <br>
+      Online inference during normal nighttime traffic.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/gifs/demo_5.gif" alt="Demo 5" width="100%">
+      <br>
+      <strong>Demo 5 — Rainy Scooter Traffic</strong>
+      <br>
+      Robust prediction under wet-road reflections.
+    </td>
+    <td width="50%">
+      <img src="assets/gifs/demo_6.gif" alt="Demo 6" width="100%">
+      <br>
+      <strong>Demo 6 — Rainy Urban Corridor</strong>
+      <br>
+      Real-world rainy traffic with storefront clutter.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/gifs/demo_7.gif" alt="Demo 7" width="100%">
+      <br>
+      <strong>Demo 7 — Close-Range Scooter Interaction</strong>
+      <br>
+      Localization of nearby traffic participants.
+    </td>
+    <td width="50%">
+      <img src="assets/gifs/demo_8.gif" alt="Demo 8" width="100%">
+      <br>
+      <strong>Demo 8 — Rainy Intersection Approach</strong>
+      <br>
+      Risk estimation while approaching an intersection.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/gifs/demo_9.gif" alt="Demo 9" width="100%">
+      <br>
+      <strong>Demo 9 — Crowded Scooter Queue</strong>
+      <br>
+      Stable prediction in dense slow-moving traffic.
+    </td>
+    <td width="50%">
+      <img src="assets/gifs/demo_10.gif" alt="Demo 10" width="100%">
+      <br>
+      <strong>Demo 10 — Higher-Speed Urban Road</strong>
+      <br>
+      Safety monitoring with surrounding vehicles at speed.
+    </td>
+  </tr>
+</table>
+
+---
+
+## iOS App Interface
+
+<p align="center">
+  <img src="assets/hermes_ios_ui_annotated.png" alt="Annotated HERMES iOS interface" width="95%">
+</p>
+
+The HERMES iOS interface is designed for real-time riding feedback while keeping the road view unobstructed.
+
+| Component | Description |
+|---|---|
+| **Safety Status Panel** | Shows the current prediction state, real-time hazard probability, and riding speed. |
+| **Live Camera Inference** | Processes the iPhone camera stream directly on device using causal frame-by-frame inference. |
+| **Hazard Localization Cues** | Visualizes image regions that contribute to the predicted traffic risk. |
+| **Runtime Control Panel** | Controls camera lens, resolution, inference frequency, warning alerts, focus, and exposure. |
+| **Compact Peripheral Indicator** | Provides quick visual safety feedback without covering the central road view. |
+| **Adaptive Inference Settings** | Allows balancing responsiveness, accuracy, thermal behavior, and battery consumption. |
+| **Settings Toggle** | Opens the overlay control panel while keeping the live camera feed visible. |
 
 ---
 
@@ -71,3 +270,71 @@ flowchart LR
     D --> G[iOS Safety Interface]
     E --> G
     F --> G
+```
+
+---
+
+## Highlights
+
+- **Real-time online inference** under strict causal constraints
+- **No future frames used during inference**
+- **CoreML-optimized deployment on iPhone**
+- **CUDA/TensorRT deployment on NVIDIA Jetson Orin Nano**
+- **Motorcycle-mounted real-world testing**
+- **RWKV-based temporal modeling** with linear complexity
+- **Multi-task prediction** of traffic anomaly occurrence, localization, and category
+- **Edge-oriented model design** with 31M parameters
+
+---
+
+## Method Overview
+
+HERMES uses a **Hierarchical Spatio-Temporal RWKV** backbone for efficient causal video understanding.
+
+### HST-RWKV Backbone
+
+The backbone combines hierarchical spatial encoding with recurrent temporal modeling, enabling online video understanding without requiring access to the full video sequence.
+
+### Multi-rate Event Sensing
+
+Stride-controlled recurrent updates capture both fast motion cues and longer-range temporal context within a single recurrent architecture.
+
+### Causal Future Distillation
+
+Causal Future Distillation transfers future-aware representation targets during training while preserving strictly causal inference at test time.
+
+### Unified Multi-task Objective
+
+HERMES jointly predicts traffic anomaly occurrence, hazard localization, and anomaly category from the same causal video representation.
+
+---
+
+## Deployment
+
+| Platform | Runtime | Status |
+|---|---|---|
+| iPhone | CoreML | Real-time prototype implemented |
+| NVIDIA Jetson Orin Nano | CUDA / TensorRT | Edge deployment tested |
+
+---
+
+## Status
+
+Current status:
+
+- iOS prototype implemented
+- CoreML model deployed on iPhone
+- Real-time motorcycle-mounted testing completed
+- NVIDIA Jetson Orin Nano deployment tested
+- Demo videos collected from real-world riding footage
+- Paper currently under review
+
+
+---
+
+
+## Contact
+
+**Patrik Patera**  
+Ph.D. Candidate, Computer Vision & Deep Learning  
+Taiwan Tech
