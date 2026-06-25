@@ -318,7 +318,7 @@ The system performs frame-by-frame online inference directly from video streams 
 
 <div class="section-card">
 
-## Real-World iOS Deployment
+<h3> Real-World iOS Deployment </h3>
 
 HERMES was integrated into a real-time iOS prototype for motorcycle-mounted traffic hazard anticipation.
 
@@ -437,7 +437,7 @@ GIFs may take several seconds to load depending on network speed. Each demo is s
 
 <div class="section-card">
 
-## iOS App Interface
+<h3>iOS App Interface</h3>
 
 <div class="image-card">
   <img src="assets/Hermes_app.png" alt="Annotated HERMES iOS interface">
@@ -484,7 +484,7 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 <div class="section-card">
 
-## System Pipeline
+<h3> System Pipeline </h3>
 
 <div class="image-card">
   <img src="assets/diagram.png" alt="HERMES iOS safety diagram">
@@ -494,7 +494,7 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 <div class="section-card">
 
-## Highlights
+<h3> Highlights </h3>
 
 <div class="feature-grid">
   <div class="feature">Real-time online inference under strict causal constraints</div>
@@ -511,15 +511,15 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 <div class="section-card">
 
-## Method Overview
+<h3> Method Overview </h3>
 
-HERMES uses a **Hierarchical Spatio-Temporal RWKV** backbone for efficient causal video understanding.
+HERMES uses a <b>Hierarchical Spatio-Temporal RWKV** backbone for efficient causal video understanding.
 
 <div class="method-grid">
 
 <div class="method-card">
 
-### HST-RWKV Backbone
+<h4> HST-RWKV Backbone </h4>
 
 The backbone combines hierarchical spatial encoding with recurrent temporal modeling, enabling online video understanding without requiring access to the full video sequence.
 
@@ -527,15 +527,15 @@ The backbone combines hierarchical spatial encoding with recurrent temporal mode
 
 <div class="method-card">
 
-### Multi-rate Event Sensing
+<h4> Multi-rate Event Sensing </h4>
 
 Stride-controlled recurrent updates capture both fast motion cues and longer-range temporal context within a single recurrent architecture.
 
 </div>
 
-<div class="method-card">
+<div class="method-card"> 
 
-### Causal Future Distillation
+<h4> Causal Future Distillation </h4>
 
 Causal Future Distillation transfers future-aware representation targets during training while preserving strictly causal inference at test time.
 
@@ -543,7 +543,7 @@ Causal Future Distillation transfers future-aware representation targets during 
 
 <div class="method-card">
 
-### Unified Multi-task Objective
+<h4> Unified Multi-task Objective </h4>
 
 HERMES jointly predicts traffic anomaly occurrence, hazard localization, and anomaly category from the same causal video representation.
 
@@ -555,7 +555,7 @@ HERMES jointly predicts traffic anomaly occurrence, hazard localization, and ano
 
 <div class="section-card">
 
-## Deployment
+<h3> Deployment </h3>
 
 <table class="clean-table">
   <tr>
@@ -579,7 +579,7 @@ HERMES jointly predicts traffic anomaly occurrence, hazard localization, and ano
 
 <div class="section-card">
 
-## Status
+<h3> Status </h3>
 
 Current status:
 
@@ -596,10 +596,11 @@ Current status:
 
 <div class="contact-card">
 
-## Contact
+<h3> Contact </h3>
 
-**Patrik Patera, Ph.D.**  
-Computer Vision & Deep Learning Researcher  
-Taiwan Tech
+<p><b>Patrik Patera, Ph.D.</b></p>
+<p><i>Computer Vision & Deep Learning Research Egnineer</i></p>
+<p>Taiwan</p>
+<p>pat.patera@gmail.com</p>
 
 </div>
