@@ -526,7 +526,7 @@ nav {
 }
 
 .deploy-image::before {
-  content: 'LIVE PREVIEW';
+  content: '';
   display: block;
   font-family: var(--mono);
   font-size: 0.65rem;
@@ -556,9 +556,38 @@ nav {
   border-color: rgba(0,229,255,0.3);
 }
 
-.demo-item img {
+.demo-item video {
   width: 100%;
   display: block;
+}
+
+.demo-video-wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.demo-play-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+  user-select: none;
+  pointer-events: none;
+}
+
+.demo-video-wrap:hover .demo-play-btn {
+  background: rgba(0,229,255,0.25);
+  border-color: var(--cyan);
 }
 
 .demo-caption {
@@ -1079,9 +1108,7 @@ footer {
       <a href="#pipeline" class="btn btn-ghost">System Pipeline</a>
     </div> -->
   </div>
-</section>
-
-<!-- METRICS -->
+  <!-- METRICS -->
 <div class="wrapper">
   <div class="metrics-row">
     <div class="metric-cell" data-index="01">
@@ -1102,6 +1129,9 @@ footer {
     </div>
   </div>
 </div>
+</section>
+
+
 
 <!-- DEPLOYMENT -->
 <section class="section" id="deployment">
@@ -1145,12 +1175,13 @@ footer {
 
     <p style="color:var(--muted);margin-bottom:32px;">HERMES running in real time on iPhone during motorcycle-mounted riding in urban traffic in Taipei City.</p>
 
-    <div class="demo-note">⚠ &nbsp;GIFs may take several seconds to load depending on network speed.</div>
-
-    <div class="demo-grid" style="margin-top:32px;">
+    <div class="demo-grid" style="margin-top:8px;">
 
       <div class="demo-item">
-        <img src="assets/demo_1.gif" alt="Demo 1">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_1.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">01</span>
           <div class="demo-info">
@@ -1161,7 +1192,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_2.gif" alt="Demo 2">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_2.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">02</span>
           <div class="demo-info">
@@ -1172,7 +1206,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_3.gif" alt="Demo 3">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_3.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">03</span>
           <div class="demo-info">
@@ -1183,7 +1220,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_4.gif" alt="Demo 4">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_4.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">04</span>
           <div class="demo-info">
@@ -1194,7 +1234,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_5.gif" alt="Demo 5">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_5.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">05</span>
           <div class="demo-info">
@@ -1205,7 +1248,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_6.gif" alt="Demo 6">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_6.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">06</span>
           <div class="demo-info">
@@ -1216,7 +1262,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_7.gif" alt="Demo 7">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_7.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">07</span>
           <div class="demo-info">
@@ -1227,7 +1276,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_8.gif" alt="Demo 8">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_8.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">08</span>
           <div class="demo-info">
@@ -1238,7 +1290,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_9.gif" alt="Demo 9">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_9.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">09</span>
           <div class="demo-info">
@@ -1249,7 +1304,10 @@ footer {
       </div>
 
       <div class="demo-item">
-        <img src="assets/demo_10.gif" alt="Demo 10">
+        <div class="demo-video-wrap" onclick="toggleVideo(this)">
+          <video autoplay loop muted playsinline><source src="assets/demo_10.mp4" type="video/mp4"></video>
+          <div class="demo-play-btn">⏸</div>
+        </div>
         <div class="demo-caption">
           <span class="demo-index">10</span>
           <div class="demo-info">
@@ -1318,7 +1376,50 @@ footer {
       <span class="section-tag">System Design</span>
       <h2 class="section-title">System <span class="dim">Pipeline</span></h2>
     </div>
-    <img src="assets/diagram.png" alt="HERMES system pipeline diagram" class="pipeline-img">
+    <svg width="100%" viewBox="0 0 960 260" role="img" style="display:block;">
+  <title>HERMES system pipeline</title>
+  <desc>Data flow from Live Camera Stream through Frame Preprocessing and CoreML HERMES Model, branching to Risk Score, Hazard Localization, and Traffic State, then converging into iOS Safety Interface.</desc>
+  <defs>
+    <marker id="pl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="108" width="148" height="44" rx="3" fill="rgba(0,229,255,0.08)" stroke="rgba(0,229,255,0.35)" stroke-width="0.5"/>
+  <text x="94" y="130" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">Live Camera Stream</text>
+
+  <line x1="168" y1="130" x2="204" y2="130" stroke="rgba(0,229,255,0.4)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+
+  <rect x="204" y="108" width="148" height="44" rx="3" fill="rgba(0,229,255,0.08)" stroke="rgba(0,229,255,0.35)" stroke-width="0.5"/>
+  <text x="278" y="130" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">Frame Preprocessing</text>
+
+  <line x1="352" y1="130" x2="388" y2="130" stroke="rgba(0,229,255,0.4)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+
+  <rect x="388" y="108" width="164" height="44" rx="3" fill="rgba(0,229,255,0.14)" stroke="rgba(0,229,255,0.55)" stroke-width="1"/>
+  <text x="470" y="124" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">CoreML HERMES</text>
+  <text x="470" y="142" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">Model</text>
+
+  <path d="M552 118 L596 118 L596 54 L636 54" fill="none" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+  <line x1="552" y1="130" x2="626" y2="130" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+  <path d="M552 142 L596 142 L596 206 L636 206" fill="none" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+
+  <rect x="636" y="32" width="120" height="44" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="0.5"/>
+  <text x="696" y="54" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#9db0b8">Risk Score</text>
+
+  <rect x="626" y="108" width="140" height="44" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="0.5"/>
+  <text x="696" y="130" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#9db0b8">Hazard Localization</text>
+
+  <rect x="636" y="184" width="120" height="44" rx="3" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="0.5"/>
+  <text x="696" y="206" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#9db0b8">Traffic State</text>
+
+  <path d="M756 54 L800 54 L800 118 L840 118" fill="none" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+  <line x1="766" y1="130" x2="840" y2="130" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+  <path d="M756 206 L800 206 L800 142 L840 142" fill="none" stroke="rgba(107,122,153,0.5)" stroke-width="1" marker-end="url(#pl-arrow)"/>
+
+  <rect x="840" y="108" width="104" height="44" rx="3" fill="rgba(0,229,255,0.08)" stroke="rgba(0,229,255,0.35)" stroke-width="0.5"/>
+  <text x="892" y="124" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">iOS Safety</text>
+  <text x="892" y="142" text-anchor="middle" dominant-baseline="central" font-family="'JetBrains Mono',monospace" font-size="11.5" fill="#00e5ff">Interface</text>
+</svg>
   </div>
 </section>
 
@@ -1518,6 +1619,20 @@ footer {
     </div>
   </div>
 </footer>
+
+<script>
+function toggleVideo(wrap) {
+  const video = wrap.querySelector('video');
+  const btn = wrap.querySelector('.demo-play-btn');
+  if (video.paused) {
+    video.play();
+    btn.textContent = '⏸';
+  } else {
+    video.pause();
+    btn.textContent = '▶';
+  }
+}
+</script>
 
 </body>
 </html>
