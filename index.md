@@ -33,7 +33,9 @@ body {
 }
 
 .main-content {
-  max-width: 1180px;
+  max-width: 900px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .main-content h1,
@@ -189,7 +191,7 @@ body {
 
 .metrics-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin: 28px 0 36px 0;
 }
