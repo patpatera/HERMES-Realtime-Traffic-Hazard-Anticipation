@@ -1,28 +1,35 @@
 ---
 layout: default
 title: HERMES
-description: Real-Time Traffic Hazard Reasoning on Edge Devices (iOS / NVidia Jetson)
+description: Real-Time Traffic Hazard Reasoning on Edge Devices
 ---
 
 <style>
 :root {
-  --bg: #0b1117;
+  --bg: #05080d;
+  --bg-soft: #0b111a;
   --card: rgba(255, 255, 255, 0.065);
   --card-strong: rgba(255, 255, 255, 0.105);
-  --text: #e8f0f2;
-  --muted: #9fb1b7;
-  --accent: #00e0a4;
-  --accent-2: #4da3ff;
+  --glass: rgba(255, 255, 255, 0.075);
+  --text: #eef7f8;
+  --muted: #9db0b8;
+  --muted-2: #73848c;
+  --accent: #00f0b5;
+  --accent-2: #54a7ff;
+  --accent-3: #b26cff;
   --warning: #ffcc66;
-  --danger: #ff6b6b;
+  --danger: #ff5f72;
   --border: rgba(255, 255, 255, 0.13);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
 }
 
 body {
-  background: radial-gradient(circle at top left, #103b3a 0, transparent 32%),
-              radial-gradient(circle at top right, #172f5f 0, transparent 30%),
-              var(--bg);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(0, 240, 181, 0.18), transparent 32%),
+    radial-gradient(circle at 90% 5%, rgba(84, 167, 255, 0.18), transparent 34%),
+    radial-gradient(circle at 50% 95%, rgba(178, 108, 255, 0.10), transparent 30%),
+    var(--bg);
+  color: var(--text);
 }
 
 .main-content {
@@ -31,7 +38,8 @@ body {
 
 .main-content h1,
 .main-content h2,
-.main-content h3 {
+.main-content h3,
+.main-content h4 {
   color: var(--text);
 }
 
@@ -49,62 +57,129 @@ body {
   color: var(--accent-2);
 }
 
+.page-header {
+  display: none;
+}
+
 .hero {
-  padding: 56px 34px 36px 34px;
-  margin-top: 20px;
+  position: relative;
+  padding: 68px 38px 38px 38px;
+  margin-top: 24px;
   border: 1px solid var(--border);
-  border-radius: 28px;
+  border-radius: 34px;
   background:
-    linear-gradient(135deg, rgba(0, 224, 164, 0.12), rgba(77, 163, 255, 0.10)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.035)),
     rgba(255, 255, 255, 0.045);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background:
+    linear-gradient(120deg, rgba(0, 240, 181, 0.25), transparent 25%),
+    linear-gradient(260deg, rgba(84, 167, 255, 0.20), transparent 32%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(0, 240, 181, 0.10);
+  border: 1px solid rgba(0, 240, 181, 0.30);
+  color: #bfffee;
+  font-weight: 800;
+  font-size: 0.84rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
 .hero-title {
-  font-size: 3.1rem;
-  line-height: 1.05;
-  margin: 0;
+  max-width: 900px;
+  margin: 22px 0 0 0;
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -3px;
   color: var(--text);
-  letter-spacing: -1.5px;
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.35rem;
-  margin-top: 16px;
-  color: #d9f7f0;
-  font-weight: 600;
+  max-width: 870px;
+  margin-top: 22px;
+  font-size: 1.28rem;
+  line-height: 1.65;
+  color: #c8d8dd;
 }
 
-.hero-text {
-  font-size: 1.05rem;
-  margin-top: 20px;
-  color: var(--muted);
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 18px;
+  border-radius: 14px;
+  font-weight: 850;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+
+.btn-primary {
+  color: #04110d !important;
+  background: linear-gradient(90deg, var(--accent), #7af7ff);
+  border-color: transparent;
+}
+
+.btn-secondary {
+  color: var(--text) !important;
+  background: rgba(255, 255, 255, 0.075);
 }
 
 .badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 26px;
+  margin-top: 28px;
 }
 
 .badge {
   padding: 8px 13px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.075);
   color: var(--text);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .hero-image {
-  margin-top: 34px;
-  border-radius: 22px;
+  position: relative;
+  z-index: 2;
+  margin-top: 38px;
+  border-radius: 26px;
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  background: #000;
 }
 
 .hero-image img {
@@ -112,35 +187,88 @@ body {
   display: block;
 }
 
-.section-card {
-  padding: 30px;
-  margin: 36px 0;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--card);
-  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.18);
+.metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 36px 0;
 }
 
-.section-card h2 {
+.metric {
+  padding: 20px;
+  border-radius: 22px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.20);
+}
+
+.metric-value {
+  color: var(--text);
+  font-size: 1.45rem;
+  font-weight: 950;
+}
+
+.metric-label {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.section-card {
+  padding: 34px;
+  margin: 36px 0;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.045));
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.22);
+}
+
+.section-label {
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 0.82rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-card h2,
+.section-card h3 {
   margin-top: 0;
-  font-size: 2rem;
-  letter-spacing: -0.5px;
+  font-size: 2.15rem;
+  letter-spacing: -0.9px;
+}
+
+.section-card > p {
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .feature {
-  padding: 16px 18px;
+  position: relative;
+  padding: 17px 18px 17px 46px;
   border-radius: 18px;
   background: var(--card-strong);
   border: 1px solid var(--border);
   color: var(--text);
-  font-weight: 700;
+  font-weight: 800;
+}
+
+.feature::before {
+  content: "◆";
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  color: var(--accent);
+  font-size: 0.85rem;
 }
 
 .demo-grid {
@@ -152,10 +280,16 @@ body {
 
 .demo-card {
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 24px;
   background: var(--card);
   overflow: hidden;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.demo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 240, 181, 0.42);
 }
 
 .demo-card img {
@@ -170,13 +304,14 @@ body {
 .demo-title {
   color: var(--text);
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 6px;
 }
 
 .demo-desc {
   color: var(--muted);
   font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .note {
@@ -189,11 +324,12 @@ body {
 }
 
 .image-card {
-  border-radius: 24px;
+  border-radius: 26px;
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  margin-top: 22px;
+  margin-top: 24px;
+  background: #000;
 }
 
 .image-card img {
@@ -205,17 +341,20 @@ body {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 10px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .clean-table th {
   color: var(--text);
   text-align: left;
   padding: 12px 14px;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .clean-table td {
-  padding: 14px;
+  padding: 15px 14px;
   background: var(--card-strong);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -223,14 +362,14 @@ body {
 
 .clean-table td:first-child {
   border-left: 1px solid var(--border);
-  border-radius: 14px 0 0 14px;
+  border-radius: 15px 0 0 15px;
   color: var(--text);
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .clean-table td:last-child {
   border-right: 1px solid var(--border);
-  border-radius: 0 14px 14px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .method-grid {
@@ -241,36 +380,53 @@ body {
 }
 
 .method-card {
-  padding: 20px;
+  padding: 22px;
   color: var(--text);
-  border-radius: 20px;
+  border-radius: 22px;
   border: 1px solid var(--border);
   background: var(--card-strong);
 }
 
-.method-card h3 {
+.method-card h4 {
   margin-top: 0;
   margin-bottom: 10px;
+  font-size: 1.12rem;
+}
+
+.method-card p {
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .status-list li {
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .contact-card {
   text-align: center;
-  padding: 34px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, rgba(0, 224, 164, 0.11), rgba(77, 163, 255, 0.10));
+  padding: 38px;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(0, 240, 181, 0.12), rgba(84, 167, 255, 0.12));
   border: 1px solid var(--border);
-  margin-top: 36px;
+  margin: 36px 0 10px 0;
+  box-shadow: var(--shadow);
 }
 
-@media (max-width: 760px) {
-  .hero-title {
-    font-size: 2.2rem;
+.contact-card h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    padding: 46px 24px 28px 24px;
   }
 
+  .hero-title {
+    letter-spacing: -1.7px;
+  }
+
+  .metrics-strip,
   .feature-grid,
   .demo-grid,
   .method-grid {
@@ -278,67 +434,103 @@ body {
   }
 
   .section-card {
-    padding: 22px;
+    padding: 24px;
   }
 }
 </style>
 
 <div class="hero">
+  <div class="hero-inner">
 
-<div class="badges">
-  <span class="badge">iOS / CoreML</span>
-  <span class="badge">NVIDIA Jetson Orin Nano</span>
-  <span class="badge">CUDA / TensorRT</span>
-  <span class="badge">RWKV Video Model</span>
-  <span class="badge">Real-Time Edge AI</span>
+    <div class="kicker">Real-Time Edge AI for Road Safety</div>
+
+    <h1 class="hero-title">
+      HERMES<br>
+      <span>Traffic Hazard Reasoning</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      HERMES is a research-to-production system for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model on iPhone and NVIDIA Jetson edge devices.
+    </p>
+
+    <p class="hero-subtitle">
+      During driving, HERMES performs <strong>real-time online inference</strong> directly from the live camera stream, enabling risk estimation and visual hazard localization without offline processing or noticeable delay.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#demo-gallery">View Real-World Demos</a>
+      <a class="btn btn-secondary" href="#system-pipeline">See System Pipeline</a>
+    </div>
+
+    <div class="badges">
+      <span class="badge">iOS / CoreML</span>
+      <span class="badge">NVIDIA Jetson Orin Nano</span>
+      <span class="badge">CUDA / TensorRT</span>
+      <span class="badge">RWKV Video Model</span>
+      <span class="badge">Real-Time Edge AI</span>
+    </div>
+
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/Hermes_app.png" alt="HERMES iOS safety interface">
+  </div>
 </div>
 
-<p class="hero-text">
-<strong>HERMES: Hierarchical Efficient RWKV with Multi-rate Event Sensing</strong>
-</p>
-
-<p class="hero-text">
-HERMES is a research-to-production project for real-time, causal traffic hazard anticipation using a CUDA/CoreML-optimized RWKV video model.
-</p>
-
-<p class="hero-text">
-The system performs frame-by-frame online inference directly from video streams and predicts traffic risk without using future frames. HERMES is deployed on <strong>iPhone via CoreML</strong> and on <strong>NVIDIA Jetson Orin Nano via CUDA/TensorRT</strong>, and validated in real-world motorcycle riding scenarios.
-</p>
-
-<div class="hero-image">
-  <img src="assets/Hermes_app.png" alt="HERMES iOS safety interface">
-</div>
-
+<div class="metrics-strip">
+  <div class="metric">
+    <div class="metric-value">Real-time</div>
+    <div class="metric-label">Live camera inference</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">Causal</div>
+    <div class="metric-label">No future frames used</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">31M</div>
+    <div class="metric-label">Edge-oriented parameters</div>
+  </div>
+  <div class="metric">
+    <div class="metric-value">iOS + Jetson</div>
+    <div class="metric-label">CoreML / TensorRT deployment</div>
+  </div>
 </div>
 
 <div class="section-card">
 
-<h3> Real-World iOS Deployment </h3>
+<div class="section-label">Deployment</div>
+<h3>Real-World iOS Safety Dashboard</h3>
 
+<p>
 HERMES was integrated into a real-time iOS prototype for motorcycle-mounted traffic hazard anticipation.
-
-The app processes a live camera stream directly on device and visualises predicted traffic risk through a lightweight safety dashboard.
+The app processes a live camera stream directly on device and visualizes predicted traffic risk through a lightweight safety dashboard.
+</p>
 
 <div class="feature-grid">
-  <div class="feature">Causal frame-by-frame inference</div>
+  <div class="feature">Real-time causal frame-by-frame inference</div>
   <div class="feature">Live traffic risk estimation</div>
   <div class="feature">SAFE / WARNING / DANGER state prediction</div>
   <div class="feature">Frame-level hazard probability</div>
   <div class="feature">Current riding speed</div>
-  <div class="feature">Visual hazard localisation cues</div>
+  <div class="feature">Visual hazard localization cues</div>
   <div class="feature">Sound and vibration warning options</div>
   <div class="feature">Runtime controls for camera, resolution, inference frequency, focus, and exposure</div>
 </div>
 
+<p>
 The system was tested in real-world urban riding scenarios, including rainy roads, nighttime traffic, dense scooter flows, intersections, and mixed vehicle environments.
+</p>
 
 </div>
 
-<div class="section-card">
+<div class="section-card" id="demo-gallery">
 
-<h3> Demo Gallery </h3>
+<div class="section-label">Real-World Riding Footage</div>
+<h3>Demo Gallery</h3>
 
-The following demos show HERMES running in real-time on iPhone during motorcycle-mounted riding in real-world urban traffic in Taipei City.
+<p>
+The following demos show HERMES running in real time on iPhone during motorcycle-mounted riding in real-world urban traffic in Taipei City.
+</p>
 
 <div class="note">
 GIFs may take several seconds to load depending on network speed.
@@ -427,18 +619,20 @@ GIFs may take several seconds to load depending on network speed.
 </div>
 
 </div>
-
 </div>
 
 <div class="section-card">
 
+<div class="section-label">Application Interface</div>
 <h3>iOS App Interface</h3>
 
 <div class="image-card">
   <img src="assets/Hermes_app.png" alt="Annotated HERMES iOS interface">
 </div>
 
+<p>
 The HERMES iOS interface is designed for real-time riding feedback while keeping the road view unobstructed.
+</p>
 
 <table class="clean-table">
   <tr>
@@ -451,7 +645,7 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
   </tr>
   <tr>
     <td>Live Camera Inference</td>
-    <td>Processes the iPhone camera stream directly on device using causal frame-by-frame inference.</td>
+    <td>Processes the iPhone camera stream directly on device using real-time causal frame-by-frame inference.</td>
   </tr>
   <tr>
     <td>Hazard Localization Cues</td>
@@ -477,9 +671,10 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 </div>
 
-<div class="section-card">
+<div class="section-card" id="system-pipeline">
 
-<h3> System Pipeline </h3>
+<div class="section-label">System Design</div>
+<h3>System Pipeline</h3>
 
 <div class="image-card">
   <img src="assets/diagram.png" alt="HERMES iOS safety diagram">
@@ -489,7 +684,8 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 <div class="section-card">
 
-<h3> Highlights </h3>
+<div class="section-label">Key Capabilities</div>
+<h3>Highlights</h3>
 
 <div class="feature-grid">
   <div class="feature">Real-time online inference under strict causal constraints</div>
@@ -497,8 +693,8 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
   <div class="feature">CoreML-optimized deployment on iPhone</div>
   <div class="feature">CUDA/TensorRT deployment on NVIDIA Jetson Orin Nano</div>
   <div class="feature">Motorcycle-mounted real-world testing</div>
-  <div class="feature">RWKV-based temporal modelling with linear complexity</div>
-  <div class="feature">Multi-task prediction of traffic anomaly occurrence, localisation, and category</div>
+  <div class="feature">RWKV-based temporal modeling with linear complexity</div>
+  <div class="feature">Multi-task prediction of traffic anomaly occurrence, localization, and category</div>
   <div class="feature">Edge-oriented model design with 31M parameters</div>
 </div>
 
@@ -506,50 +702,50 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
 
 <div class="section-card">
 
-<h3> Method Overview </h3>
+<div class="section-label">Research Method</div>
+<h3>Method Overview</h3>
 
-HERMES uses a <b>Hierarchical Spatio-Temporal RWKV** backbone for efficient causal video understanding.
+<p>
+HERMES uses a <b>Hierarchical Spatio-Temporal RWKV</b> backbone for efficient causal video understanding.
+</p>
 
 <div class="method-grid">
 
 <div class="method-card">
-
-<h4> HST-RWKV Backbone </h4>
-
-The backbone combines hierarchical spatial encoding with recurrent temporal modelling, enabling online video understanding without requiring access to the full video sequence.
-
+<h4>HST-RWKV Backbone</h4>
+<p>
+The backbone combines hierarchical spatial encoding with recurrent temporal modeling, enabling online video understanding without requiring access to the full video sequence.
+</p>
 </div>
 
 <div class="method-card">
-
-<h4> Multi-rate Event Sensing </h4>
-
+<h4>Multi-rate Event Sensing</h4>
+<p>
 Stride-controlled recurrent updates capture both fast motion cues and longer-range temporal context within a single recurrent architecture.
-
-</div>
-
-<div class="method-card"> 
-
-<h4> Causal Future Distillation </h4>
-
-Causal Future Distillation transfers future-aware representation targets during training while preserving strictly causal inference at test time.
-
+</p>
 </div>
 
 <div class="method-card">
-
-<h4> Unified Multi-task Objective </h4>
-
-HERMES jointly predicts traffic anomaly occurrence, hazard localisation, and anomaly category from the same causal video representation.
-
+<h4>Causal Future Distillation</h4>
+<p>
+Causal Future Distillation transfers future-aware representation targets during training while preserving strictly causal inference at test time.
+</p>
 </div>
 
+<div class="method-card">
+<h4>Unified Multi-task Objective</h4>
+<p>
+HERMES jointly predicts traffic anomaly occurrence, hazard localization, and anomaly category from the same causal video representation.
+</p>
+</div>
 
+</div>
 </div>
 
 <div class="section-card">
 
-<h3> Deployment </h3>
+<div class="section-label">Edge Runtime</div>
+<h3>Deployment</h3>
 
 <table class="clean-table">
   <tr>
@@ -573,9 +769,8 @@ HERMES jointly predicts traffic anomaly occurrence, hazard localisation, and ano
 
 <div class="section-card">
 
-<h3> Status </h3>
-
-Current status:
+<div class="section-label">Project Status</div>
+<h3>Status</h3>
 
 <ul class="status-list">
   <li>iOS prototype implemented</li>
@@ -590,10 +785,10 @@ Current status:
 
 <div class="contact-card">
 
-<h3> Contact </h3>
+<h3>Contact</h3>
 
 <p><b>Patrik Patera, Ph.D.</b></p>
-<p><i>Computer Vision & Deep Learning Research Egnineer</i></p>
+<p><i>Computer Vision & Deep Learning Research Engineer</i></p>
 <p>Taiwan</p>
 <p>pat.patera@gmail.com</p>
 
