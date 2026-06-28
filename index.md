@@ -242,6 +242,7 @@ body {
 
 .method-card {
   padding: 20px;
+  color: var(--text);
   border-radius: 20px;
   border: 1px solid var(--border);
   background: var(--card-strong);
@@ -284,12 +285,6 @@ body {
 
 <div class="hero">
 
-<h1 class="hero-title">HERMES</h1>
-
-<div class="hero-subtitle">
-Real-Time Traffic Hazard Reasoning on Edge Devices
-</div>
-
 <div class="badges">
   <span class="badge">iOS / CoreML</span>
   <span class="badge">NVIDIA Jetson Orin Nano</span>
@@ -322,7 +317,7 @@ The system performs frame-by-frame online inference directly from video streams 
 
 HERMES was integrated into a real-time iOS prototype for motorcycle-mounted traffic hazard anticipation.
 
-The app processes a live camera stream directly on device and visualizes predicted traffic risk through a lightweight safety dashboard.
+The app processes a live camera stream directly on device and visualises predicted traffic risk through a lightweight safety dashboard.
 
 <div class="feature-grid">
   <div class="feature">Causal frame-by-frame inference</div>
@@ -330,7 +325,7 @@ The app processes a live camera stream directly on device and visualizes predict
   <div class="feature">SAFE / WARNING / DANGER state prediction</div>
   <div class="feature">Frame-level hazard probability</div>
   <div class="feature">Current riding speed</div>
-  <div class="feature">Visual hazard localization cues</div>
+  <div class="feature">Visual hazard localisation cues</div>
   <div class="feature">Sound and vibration warning options</div>
   <div class="feature">Runtime controls for camera, resolution, inference frequency, focus, and exposure</div>
 </div>
@@ -341,12 +336,12 @@ The system was tested in real-world urban riding scenarios, including rainy road
 
 <div class="section-card">
 
-## Demo Gallery
+<h3> Demo Gallery </h3>
 
-The following demos show HERMES running in real time on iPhone during motorcycle-mounted riding in real-world urban traffic.
+The following demos show HERMES running in real-time on iPhone during motorcycle-mounted riding in real-world urban traffic in Taipei City.
 
 <div class="note">
-GIFs may take several seconds to load depending on network speed. Each demo is sampled from real riding footage.
+GIFs may take several seconds to load depending on network speed.
 </div>
 
 <div class="demo-grid">
@@ -502,8 +497,8 @@ The HERMES iOS interface is designed for real-time riding feedback while keeping
   <div class="feature">CoreML-optimized deployment on iPhone</div>
   <div class="feature">CUDA/TensorRT deployment on NVIDIA Jetson Orin Nano</div>
   <div class="feature">Motorcycle-mounted real-world testing</div>
-  <div class="feature">RWKV-based temporal modeling with linear complexity</div>
-  <div class="feature">Multi-task prediction of traffic anomaly occurrence, localization, and category</div>
+  <div class="feature">RWKV-based temporal modelling with linear complexity</div>
+  <div class="feature">Multi-task prediction of traffic anomaly occurrence, localisation, and category</div>
   <div class="feature">Edge-oriented model design with 31M parameters</div>
 </div>
 
@@ -521,7 +516,7 @@ HERMES uses a <b>Hierarchical Spatio-Temporal RWKV** backbone for efficient caus
 
 <h4> HST-RWKV Backbone </h4>
 
-The backbone combines hierarchical spatial encoding with recurrent temporal modeling, enabling online video understanding without requiring access to the full video sequence.
+The backbone combines hierarchical spatial encoding with recurrent temporal modelling, enabling online video understanding without requiring access to the full video sequence.
 
 </div>
 
@@ -545,11 +540,10 @@ Causal Future Distillation transfers future-aware representation targets during 
 
 <h4> Unified Multi-task Objective </h4>
 
-HERMES jointly predicts traffic anomaly occurrence, hazard localization, and anomaly category from the same causal video representation.
+HERMES jointly predicts traffic anomaly occurrence, hazard localisation, and anomaly category from the same causal video representation.
 
 </div>
 
-</div>
 
 </div>
 
